@@ -1,0 +1,30 @@
+<html>
+<script>
+function func()
+{
+alert("working");
+window.location = "/form";
+}
+</script> 
+<body>
+
+<form class="form-group perfect-centering" action="/" method="POST">
+    <div class="well well-lg">
+    <label><strong>Username:</strong></label><br>
+    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Username" required></input>
+    <br>
+    <label><strong>Password:</strong></label><br>
+    <input type="password" id="password" name="psswd" class="form-control" placeholder="Enter Password" required></input>
+    <br>
+	{% if err=="if" %}
+	<p>login failed</p>
+	{% set err="i" %}
+	{% else %}
+	<p>i m coming</p>
+	{%endif%}
+    <button type="submit" class="btn btn-md form-control btn-danger">Login</button>
+</form>
+<button type="submit" class="btn btn-md form-control btn-danger" onclick = "func()">new student?</button>
+</body>
+</html>
+
